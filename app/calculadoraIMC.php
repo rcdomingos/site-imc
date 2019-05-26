@@ -89,21 +89,29 @@ sqlsrv_close($conn);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
   <title>Resultado</title>
 </head>
 
-<body>
-  <header>
-    <p><?php echo $_SESSION['nome']; ?> | <a href="../libs/logout.php">Sair</a></p>
-  </header>
-  <section>
-    <h1>Resultado</h1>
-    <p>IMC: <?php echo $imc; ?></p>
-    <p><?php echo $situacao; ?></p>
-    <p><small>obs: <?php echo  $retornoHistorico; ?> </small></p>
-    <a href="./aplicacao.php">Novo cálculo</a>
-  </section>
+<body class="body-cinza">
+  <nav class="navbar fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="#">Calculadora IMC</a>
+    <span class="navbar-text text-right">
+      <p>Bem Vindo <?php echo $_SESSION['nome']; ?> | <a href="../libs/logout.php">Sair</a></p>
+    </span>
+  </nav>
+
+  <main class="text-center main">
+    <div class="box box-roxo rounded">
+      <h1>Resultado</h1>
+      <p class="text-left imc">IMC:<span> <?php echo $imc; ?></span></p>
+      <p class="text-left"><?php echo $situacao; ?></p>
+      <p class="text-left"><small>obs: <?php echo  $retornoHistorico; ?> </small></p>
+
+      <a class="btn btn-lg btn-light btn-block" href="./index.php">Novo cálculo</a>
+    </div>
+  </main>
 </body>
 
 </html>

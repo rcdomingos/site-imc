@@ -47,7 +47,7 @@ if ($stmt_email === false) {
       $_SESSION['nome'] = $nome_login[0];
       $_SESSION['userEmail'] = $emailUsuario;
       $_SESSION['userSenha'] = $senhaUsuario;
-      header("location: ../app/aplicacao.php");
+      header("location: ../app/index.php");
     }
     sqlsrv_free_stmt($stmt);
   }

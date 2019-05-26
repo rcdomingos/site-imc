@@ -12,22 +12,28 @@ if (!isset($_SESSION['info'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <title>Tela de Login</title>
 </head>
 
-<body>
-  <form action="./app/autenticacao.php" method="post">
-    <label for="email-id">Login:
-      <input type="email" name="email-id" id="email-id">
-    </label><br>
-    <label for="senha-id">Senha:
-      <input type="password" name="senha-id" id="senha-id">
-    </label><br>
-    <button type="submit">Acessar</button>
-    <a href="./app/cadastro.php"><button type="button">Cadastro</button></a>
-    <p> <?php echo $retorErro ?></p>
-  </form>
+<body class="body-cinza text-center">
 
+  <main class="text-center main">
+    <div class="box box-roxo rounded d-flex">
+      <form class="form-signin" action="./app/autenticacao.php" method="post">
+        <h1 class="h3 mb-3 font-weight-normal">Calcule seu IMC<h1>
+            <label for="email-id" class="sr-only">Login:</label>
+            <input type="email" name="email-id" id="inputEmail" class=" topo form-control" placeholder="Seu email" required autofocus>
+            <label for="senha-id" class="sr-only">Senha: </label>
+            <input type="password" name="senha-id" id="inputPassword" class="ultimo form-control" placeholder="Senha" required>
+
+            <button class="mt-4 btn btn-lg btn-light btn-block" type="submit">Acessar</button>
+            <a class="btn btn-lg btn-light btn-block" href="./app/cadastro.php">Cadastro</a>
+            <p><small> <?php echo $retorErro ?></small></p>
+      </form>
+    </div>
+  </main>
 </body>
 
 </html>

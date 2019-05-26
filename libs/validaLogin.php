@@ -12,5 +12,5 @@ if (isset($_SESSION['logado']) === false) {
   $_SESSION['nome'],
   $_SESSION['logado']);
   //Redireciona para a página de autenticação
-  header('Location: ./index.php');
+  header('Location: ../index.php');
 };

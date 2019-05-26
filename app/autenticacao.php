@@ -57,7 +57,7 @@ if ($row_count  > 0) {
   $_SESSION['logado'] = true;
   $_SESSION['userEmail'] = $user_login;
   $_SESSION['userSenha'] = $user_senha;
-  header("location: aplicacao.php");
+  header("location: index.php");
   die('O redirecionamento falhou');
 } else {
   session_destroy();
